@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A85427912A0D5B50006DDBE7 /* riotnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85427902A0D5B50006DDBE7 /* riotnerApp.swift */; };
+		A85427912A0D5B50006DDBE7 /* RiotnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85427902A0D5B50006DDBE7 /* RiotnerApp.swift */; };
 		A85427932A0D5B50006DDBE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85427922A0D5B50006DDBE7 /* ContentView.swift */; };
 		A85427952A0D5B51006DDBE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A85427942A0D5B51006DDBE7 /* Assets.xcassets */; };
 		A85427982A0D5B51006DDBE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A85427972A0D5B51006DDBE7 /* Preview Assets.xcassets */; };
+		A8FD13AC2A0D7CB100D2300A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A8FD13AB2A0D7CB100D2300A /* Alamofire */; };
+		A8FD13AE2A0D7CC800D2300A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD13AD2A0D7CC800D2300A /* Networking.swift */; };
+		A8FD13B22A0D8C9A00D2300A /* RNChampion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD13B12A0D8C9A00D2300A /* RNChampion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A854278D2A0D5B50006DDBE7 /* riotner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riotner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A85427902A0D5B50006DDBE7 /* riotnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riotnerApp.swift; sourceTree = "<group>"; };
+		A85427902A0D5B50006DDBE7 /* RiotnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotnerApp.swift; sourceTree = "<group>"; };
 		A85427922A0D5B50006DDBE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A85427942A0D5B51006DDBE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A85427972A0D5B51006DDBE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A8FD13AD2A0D7CC800D2300A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		A8FD13AF2A0D8A7C00D2300A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A8FD13B12A0D8C9A00D2300A /* RNChampion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNChampion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FD13AC2A0D7CB100D2300A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +58,10 @@
 		A854278F2A0D5B50006DDBE7 /* riotner */ = {
 			isa = PBXGroup;
 			children = (
-				A85427902A0D5B50006DDBE7 /* riotnerApp.swift */,
+				A8FD13B02A0D8C8100D2300A /* Model */,
+				A8FD13AF2A0D8A7C00D2300A /* Info.plist */,
+				A8FD13A92A0D736300D2300A /* Networking */,
+				A85427902A0D5B50006DDBE7 /* RiotnerApp.swift */,
 				A85427922A0D5B50006DDBE7 /* ContentView.swift */,
 				A85427942A0D5B51006DDBE7 /* Assets.xcassets */,
 				A85427962A0D5B51006DDBE7 /* Preview Content */,
@@ -65,6 +75,22 @@
 				A85427972A0D5B51006DDBE7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A8FD13A92A0D736300D2300A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A8FD13AD2A0D7CC800D2300A /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A8FD13B02A0D8C8100D2300A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8FD13B12A0D8C9A00D2300A /* RNChampion.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +109,9 @@
 			dependencies = (
 			);
 			name = riotner;
+			packageProductDependencies = (
+				A8FD13AB2A0D7CB100D2300A /* Alamofire */,
+			);
 			productName = riotner;
 			productReference = A854278D2A0D5B50006DDBE7 /* riotner.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +140,9 @@
 				Base,
 			);
 			mainGroup = A85427842A0D5B50006DDBE7;
+			packageReferences = (
+				A8FD13AA2A0D7CB100D2300A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A854278E2A0D5B50006DDBE7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FD13AE2A0D7CC800D2300A /* Networking.swift in Sources */,
 				A85427932A0D5B50006DDBE7 /* ContentView.swift in Sources */,
-				A85427912A0D5B50006DDBE7 /* riotnerApp.swift in Sources */,
+				A8FD13B22A0D8C9A00D2300A /* RNChampion.swift in Sources */,
+				A85427912A0D5B50006DDBE7 /* RiotnerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +304,7 @@
 				DEVELOPMENT_TEAM = LM4N28Q7MY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = riotner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +334,7 @@
 				DEVELOPMENT_TEAM = LM4N28Q7MY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = riotner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8FD13AA2A0D7CB100D2300A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8FD13AB2A0D7CB100D2300A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8FD13AA2A0D7CB100D2300A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A85427852A0D5B50006DDBE7 /* Project object */;
 }
