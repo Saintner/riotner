@@ -12,18 +12,27 @@ class RNNetworking {
     static let shared = RNNetworking()
     var localeLanguage: String?
     private let developmentKey = "RGAPI-7234e4cb-6f7f-4bcf-bcf6-750528dbb024"
+    private let dDragonBaseURL = "http://ddragon.leagueoflegends.com/cdn/"
     
     init() {
         let language = Locale.current.language
         localeLanguage = language.region?.identifier
     }
     func getChampions() async {
+        let (champs, error) = await makeRequest(with: "13.9.1/data/\(localeLanguage?.serverLanguageIdentifier ?? "")/champion.json", and: RNChampionList.self)
+        if (error != nil) {
+            print("error")
+        } else {
+            print(champs!)
+        }
+    }
+    
+    private func makeRequest<T: Codable>(with url: String, and codableType: T.Type) async -> (T?, Error?) {
         do {
-            var championsData = try await AF.request("http://ddragon.leagueoflegends.com/cdn/13.9.1/data/\(localeLanguage?.serverLanguageIdentifier ?? "")/champion.json").serializingData().value
-            var champions = try JSONSerialization.jsonObject(with: championsData)
-            print(champions)
-        } catch(let err) {
-            print(err.localizedDescription)
+            let rq = try await AF.request("\(dDragonBaseURL)\(url)").serializingDecodable(T.self).value
+            return (rq, nil)
+        } catch (let err) {
+            return (nil, err)
         }
     }
 }
