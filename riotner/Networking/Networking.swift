@@ -18,12 +18,12 @@ class RNNetworking {
         let language = Locale.current.language
         localeLanguage = language.region?.identifier
     }
-    func getChampions() async {
+    func getChampions() async -> (RNChampionList?, Error?) {
         let (champs, error) = await makeRequest(with: "13.9.1/data/\(localeLanguage?.serverLanguageIdentifier ?? "")/champion.json", and: RNChampionList.self)
         if (error != nil) {
-            print("error")
+            return (nil, error)
         } else {
-            print(champs!)
+           return (champs, nil)
         }
     }
     
