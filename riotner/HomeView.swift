@@ -15,7 +15,7 @@ struct HomeView: View {
                 ForEach(sections, id: \.self) { section in
                     Section {
                         switch section {
-                        case 4: Text("Challenger tier list")
+                        case 4: ChallengerTierListView()
                         default: Text("Section \(section)")
                         }
                     }

@@ -19,7 +19,7 @@ class RNNetworking {
         localeLanguage = language.region?.identifier
     }
     func getChampions() async {
-        let (champs, error) = await makeRequest(with: "13.9.1/data/\(localeLanguage?.serverLanguageIdentifier ?? "")/champion.json", and: RNChampionList.self)
+        let (champs, error) = await makeDDragonRequest(with: "13.9.1/data/\(localeLanguage?.serverLanguageIdentifier ?? "")/champion.json", and: RNChampionList.self)
         if (error != nil) {
             print("error")
         } else {
@@ -27,9 +27,13 @@ class RNNetworking {
         }
     }
     
+    private func makeDDragonRequest<T: Codable>(with url: String, and type: T.Type) async -> (T?, Error?) {
+        await makeRequest(with: "\(dDragonBaseURL)\(url)", and: type)
+    }
+    
     private func makeRequest<T: Codable>(with url: String, and codableType: T.Type) async -> (T?, Error?) {
         do {
-            let rq = try await AF.request("\(dDragonBaseURL)\(url)").serializingDecodable(T.self).value
+            let rq = try await AF.request(url).serializingDecodable(T.self).value
             return (rq, nil)
         } catch (let err) {
             return (nil, err)
