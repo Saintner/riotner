@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var currentView = 0
     var body: some View {
         TabView {
-            Text("Tab 1")
+            HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
