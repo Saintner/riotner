@@ -18,6 +18,7 @@
 		A8FD13BB2A13370000D2300A /* ChallengerTierListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD13BA2A13370000D2300A /* ChallengerTierListView.swift */; };
 		A8FD13BD2A13F84100D2300A /* ChallengerTierListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD13BC2A13F84100D2300A /* ChallengerTierListViewModel.swift */; };
 		A8FD13BF2A15374000D2300A /* URLHandlerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD13BE2A15374000D2300A /* URLHandlerHelpers.swift */; };
+		A8FD13C12A153D1A00D2300A /* RNChallengersTierList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD13C02A153D1A00D2300A /* RNChallengersTierList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A8FD13BA2A13370000D2300A /* ChallengerTierListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerTierListView.swift; sourceTree = "<group>"; };
 		A8FD13BC2A13F84100D2300A /* ChallengerTierListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerTierListViewModel.swift; sourceTree = "<group>"; };
 		A8FD13BE2A15374000D2300A /* URLHandlerHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandlerHelpers.swift; sourceTree = "<group>"; };
+		A8FD13C02A153D1A00D2300A /* RNChallengersTierList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNChallengersTierList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A8FD13B12A0D8C9A00D2300A /* RNChampion.swift */,
+				A8FD13C02A153D1A00D2300A /* RNChallengersTierList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				A8FD13AE2A0D7CC800D2300A /* Networking.swift in Sources */,
 				A85427932A0D5B50006DDBE7 /* ContentView.swift in Sources */,
 				A8FD13BD2A13F84100D2300A /* ChallengerTierListViewModel.swift in Sources */,
+				A8FD13C12A153D1A00D2300A /* RNChallengersTierList.swift in Sources */,
 				A8FD13B22A0D8C9A00D2300A /* RNChampion.swift in Sources */,
 				A8FD13B92A1334CF00D2300A /* HomeView.swift in Sources */,
 				A85427912A0D5B50006DDBE7 /* RiotnerApp.swift in Sources */,
