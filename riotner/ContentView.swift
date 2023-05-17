@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var currentView = 0
+    @StateObject private var champions = ChampionsViewModel()
+    
     var body: some View {
         TabView {
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-            Text("Tab 2")
-                .tabItem {
-                    Label("Champions", systemImage: "person.2.crop.square.stack")
-                }
+            
+            NavigationStack {
+                ChampionsListView()
+                    .environmentObject(champions)
+            }
+            .tabItem {
+                Label("Champions", systemImage: "person.2.crop.square.stack")
+            }
         }
     }
 }

@@ -29,7 +29,7 @@ struct RNChampion: Codable {
 }
 
 
-enum RNChampionId: String, Codable {
+enum RNChampionId: String, Codable, CaseIterable {
     case Aatrox
     case Ahri
     case Akali

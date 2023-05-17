@@ -11,11 +11,7 @@ import SwiftUI
 struct RiotnerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().onAppear {
-                Task {
-                    await RNNetworking.shared.getChampions()
-                }
-            }
+            ContentView()
         }
     }
 }
