@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ChallengerTierListView: View {
-//    var vm: 
+    var vm: ChallengerTierListViewModel
     var body: some View {
         VStack {
-            ForEach(0...20, id: \.self) { x in
-                Text("Hello, Challengers!").padding()
+            ForEach(vm.challengers, id: \.self) { x in
+                Text("Hello, Challenger N°\(x + 1)").padding()
             }
         }
     }
@@ -20,6 +20,6 @@ struct ChallengerTierListView: View {
 
 struct ChallengerTierListView_Previews: PreviewProvider {
     static var previews: some View {
-        ChallengerTierListView()
+        ChallengerTierListView(vm: ChallengerTierListViewModel())
     }
 }
